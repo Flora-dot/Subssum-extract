@@ -9,16 +9,18 @@ import CallCenterIcon from "../../assets/icons/customer-care-icon.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export const SidebarMenu = () => {
+export const SidebarMenu = ({ onTabClick }) => {
   const [activeMenu, setActiveMenu] = useState("");
 
+  const handleTabClick = (tab) => {
+    setActiveMenu(tab);
+    onTabClick(tab); 
+  };
   return (
     <ul className="list-none flex flex-col gap-3">
       <Link to='/dashboard'>
       <li
-        onClick={() => {
-          setActiveMenu("Dashboard");
-        }}
+        onClick={() => handleTabClick("Dashboard")}
         className={`flex  py-3 px-3 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white ${
           activeMenu === "Dashboard"
             ? "bg-custom-primary-blue text-custom-white"
@@ -35,10 +37,9 @@ export const SidebarMenu = () => {
         </div>
       </li>
       </Link>
+      <Link to='/buy-airtime'>
       <li
-        onClick={() => {
-          setActiveMenu("Buy Airtime");
-        }}
+        onClick={() => handleTabClick("Buy Airtime")}
         className={`flex items-center justify-between py-3 px-3 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white ${
           activeMenu === "Buy Airtime"
             ? "bg-custom-primary-blue text-custom-white"
@@ -65,10 +66,10 @@ export const SidebarMenu = () => {
           />
         </svg>
       </li>
+      </Link>
       <li
-        onClick={() => {
-          setActiveMenu("Buy Data");
-        }}
+       onClick={() => handleTabClick("Buy Data")}
+
         className={`flex items-center justify-between py-3 px-3 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white ${
           activeMenu === "Buy Data"
             ? "bg-custom-primary-blue text-custom-white"
@@ -96,9 +97,8 @@ export const SidebarMenu = () => {
         </svg>
       </li>
       <li
-        onClick={() => {
-          setActiveMenu("Tv Subscription");
-        }}
+        onClick={() => handleTabClick("TV Subscription")}
+
         className={`flex items-center justify-between py-3 px-3 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white ${
           activeMenu === "Tv Subscription"
             ? "bg-custom-primary-blue text-custom-white"
@@ -126,9 +126,7 @@ export const SidebarMenu = () => {
         </svg>
       </li>
       <li
-        onClick={() => {
-          setActiveMenu("Pay Bill");
-        }}
+        onClick={() => handleTabClick("Pay Bill")}
         className={`flex items-center justify-between py-3 px-3 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white ${
           activeMenu === "Pay Bill"
             ? "bg-custom-primary-blue text-custom-white"
@@ -156,9 +154,8 @@ export const SidebarMenu = () => {
         </svg>
       </li>
       <li
-        onClick={() => {
-          setActiveMenu("Airtime to cash");
-        }}
+        onClick={() => handleTabClick("Airtime to cash")}
+
         className={`flex  py-3 px-3 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white ${
           activeMenu === "Airtime to cash"
             ? "bg-custom-primary-blue text-custom-white"
@@ -171,9 +168,8 @@ export const SidebarMenu = () => {
         </div>
       </li>
       <li
-        onClick={() => {
-          setActiveMenu("Transaction History");
-        }}
+        onClick={() => handleTabClick("Transaction History")}
+
         className={`flex  py-3 px-3 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white ${
           activeMenu === "Transaction History"
             ? "bg-custom-primary-blue text-custom-white"
@@ -186,9 +182,8 @@ export const SidebarMenu = () => {
         </div>
       </li>
       <li
-        onClick={() => {
-          setActiveMenu("Help & Support");
-        }}
+        onClick={() => handleTabClick("Help & Support")}
+
         className={`flex  py-3 px-3 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white ${
           activeMenu === "Help & Support"
             ? "bg-custom-primary-blue text-custom-white"

@@ -17,6 +17,7 @@ export default {
       'custom-grey-30' : '#d7e1f4',
       'custom-red-error' : '#ee5d50',
       'custom-grey-90' : '#2b3b5a',
+      'placeholder-blue' : '#869DCB'
       
     },
     extend: {},

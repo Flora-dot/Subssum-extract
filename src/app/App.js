@@ -6,6 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { LoginPage } from './pages/LoginPage';
 import { Layout } from '../components/Layout';
 import { DashboardPage } from './pages/DashboardPage';
+import { UserProfilePage } from './pages/UserProfilePage';
+import { BuyAirtimePage } from './pages/BuyAirtimePage';
 
 const App = () => {
   return (
@@ -15,11 +17,11 @@ const App = () => {
         {/* Route for Login Page (no layout) */}
         <Route path="/login" element={<LoginPage />} />
         
-        {/* Routes that use the Layout with Sidebar */}
-        <Route element={<Layout />}>
-          <Route path="/dashboard" element={<DashboardPage />} />
-          {/* <Route path="/buy-airtime" element={<BuyAirtimePage />} /> */}
-          {/* Add other routes here */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<DashboardPage />} />
+          <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="buy-airtime" element={<BuyAirtimePage />} />
+          <Route path="user-profile" element={<UserProfilePage />} /> {/* UserProfile route */}
         </Route>
       </Routes>
     </Router>
