@@ -7,8 +7,23 @@ export const HeaderSignedout = () => {
       <p>
         <a
           href="/Login"
-          className="text-base font-semibold text-custom-primary-blue"
+          className="text-base font-semibold text-custom-primary-blue flex items-center gap-3"
         >
+          <svg
+            width="8"
+            height="12"
+            viewBox="0 0 8 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.39998 10.7998L1.59998 5.9998L6.39998 1.19981"
+              stroke="#4169E1"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
           Home
         </a>
       </p>
@@ -22,16 +37,14 @@ export const HeaderSignedout = () => {
   );
 };
 
-export const HeaderSignedIn = ({activeTab}) => {
-//   const [activeTab, setActiveTab] = useState("Dashboard");
-  console.log(activeTab)
-
-  
+export const HeaderSignedIn = ({ activeTab }) => {
+  //   const [activeTab, setActiveTab] = useState("Dashboard");
+  console.log(activeTab);
 
   return (
     <header className="flex items-center justify-between">
       <p className="font-medium text-xl leading-5 text-custom-grey-90">
-      {activeTab === "Dashboard" && "Welcome, Lawal Wahab"}
+        {activeTab === "Dashboard" && "Welcome, Lawal Wahab"}
         {activeTab === "Buy Airtime" && "Buy Airtime"}
         {activeTab === "Buy Data" && "Buy Data"}
         {activeTab === "Tv Subscription" && "TV Subscription"}

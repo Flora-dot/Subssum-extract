@@ -33,7 +33,7 @@ export const SidebarMenu = ({ onTabClick }) => {
             alt=""
             className="hover:filter:invert (100%)"
           />
-          <p href="/dashboard">Dashboard</p>
+          <p>Dashboard</p>
         </div>
       </li>
       </Link>
@@ -167,6 +167,7 @@ export const SidebarMenu = ({ onTabClick }) => {
           <a href="/">Airtime to cash</a>
         </div>
       </li>
+      <Link to="/transaction-history">
       <li
         onClick={() => handleTabClick("Transaction History")}
 
@@ -178,9 +179,11 @@ export const SidebarMenu = ({ onTabClick }) => {
       >
         <div className="flex gap-3 items-center text-xl font-medium">
           <img src={PaperIcon} alt="" />
-          <a href="/">Transaction History</a>
+          <p>Transaction History</p>
         </div>
       </li>
+      </Link>
+      <Link to='/help-support'>
       <li
         onClick={() => handleTabClick("Help & Support")}
 
@@ -192,9 +195,10 @@ export const SidebarMenu = ({ onTabClick }) => {
       >
         <div className="flex gap-3 items-center text-xl font-medium">
           <img src={CallCenterIcon} alt="" />
-          <a href="/">Help & Support</a>
+          <p>Help & Support</p>
         </div>
       </li>
+      </Link>
     </ul>
   );
 };
@@ -204,21 +208,10 @@ export const Logout = () => {
   const [activeMenu, setActiveMenu] = useState("");
   return(
     <Link to='/Login'>
-    <li
-        onClick={() => {
-          setActiveMenu("Help & Support");
-        }}
-        className={`flex  py-3 px-3 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white ${
-          activeMenu === "Log Out"
-            ? "bg-custom-primary-blue text-custom-white"
-            : ""
-        }`}
-      >
-        <div className="flex gap-3 items-center text-xl font-medium">
+        <div className="w-full flex gap-3 items-center text-xl font-medium py-3 pl-2 pr-12 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white">
           <img src={CallCenterIcon} alt="" />
           <p>Log Out</p>
         </div>
-      </li>
       </Link>
   );
 }
