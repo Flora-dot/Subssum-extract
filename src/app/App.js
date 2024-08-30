@@ -16,8 +16,9 @@ const App = () => {
     <Router>
       <ToastContainer />
       <Routes>
-        {/* Route for Login Page (no layout) */}
-        <Route path="/login" element={<LoginPage />} />
+        
+        
+        <Route path="/" element={<LoginPage />} />
         
         <Route path="/" element={<Layout />}>
           <Route index element={<DashboardPage />} />
