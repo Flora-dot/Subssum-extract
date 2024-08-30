@@ -207,7 +207,7 @@ export const SidebarMenu = ({ onTabClick }) => {
 export const Logout = () => {
   const [activeMenu, setActiveMenu] = useState("");
   return(
-    <Link to='/'>
+    <Link to='/login'>
         <div className="w-full flex gap-3 items-center text-xl font-medium py-3 pl-2 pr-12 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white">
           <img src={CallCenterIcon} alt="" />
           <p>Log Out</p>
