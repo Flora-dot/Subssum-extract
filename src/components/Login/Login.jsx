@@ -3,7 +3,7 @@ import { HeaderSignedout } from "../Header/Header";
 import ToggleButton from "../ToggleButton";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -12,6 +12,17 @@ export const Login = () => {
     setPasswordVisible(!passwordVisible);
   };
 
+  const navigate = useNavigate();
+  const [activeMenu, setActiveMenu] = useState('')
+  const [activeTab, setActiveTab] = useState('')
+
+  const handleLogin = () => {
+    setActiveMenu('Dashboard');
+    setActiveTab('Dashboard')
+    navigate('/dashboard');
+  }
+  
+  
   return (
     <section className="w-4/5 p-7 bg-custom-faint-white">
       <HeaderSignedout />
@@ -116,15 +127,14 @@ export const Login = () => {
                 Recover Password
               </a>
             </div>
-            <Link to="/dashboard">
               <CustomButton
+              onClick={handleLogin}
                 type="submit"
                 children={"Log In"}
                 className={
                   "bg-custom-primary-blue text-custom-white w-full py-4 px-12 rounded-xl hover:bg-dark-blue"
                 }
               />
-            </Link>
           </div>
         </form>
       </section>

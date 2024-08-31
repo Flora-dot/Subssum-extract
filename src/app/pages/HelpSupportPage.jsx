@@ -2,7 +2,7 @@ import { support } from "../../components/supportlist";
 
 export const HelpSupportPage = () => {
   return (
-    <section className="mt-8 grid grid-cols-2 gap-8 w-4/6">
+    <section className="mt-8 grid md:grid-cols-2 lg:grid-cols-2 gap-8 w-full lg:w-4/6">
       {support.map((contact) => (
         <div className="flex gap-4 p-3 border-2 items-center border-custom-grey-30 rounded-2xl">
         <img src={contact.icon} alt="" />
