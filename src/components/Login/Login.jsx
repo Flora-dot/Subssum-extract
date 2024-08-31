@@ -121,7 +121,7 @@ export const Login = () => {
                 type="submit"
                 children={"Log In"}
                 className={
-                  "bg-custom-primary-blue text-custom-white w-full py-4 px-12 rounded-xl"
+                  "bg-custom-primary-blue text-custom-white w-full py-4 px-12 rounded-xl hover:bg-dark-blue"
                 }
               />
             </Link>

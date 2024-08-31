@@ -21,6 +21,14 @@ body {
   background: linear-gradient(to bottom, transparent, #00008B);
 }
 
+.stroke-custom-white {
+  stroke: #ffffff;
+}
+
+.stroke-custom-grey-70 {
+  stroke: #6882B6; /* Your original stroke color */
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

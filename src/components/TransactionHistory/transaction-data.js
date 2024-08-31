@@ -1,6 +1,7 @@
 export const transactions = [
     {
       service: "Mtn Airtime VTU",
+      number: '09068562949',
       amount: "₦100.00",
       totalAmount: "₦100.00",
       status: "Initiated",
@@ -10,15 +11,17 @@ export const transactions = [
     },
     {
       service: "Airtel DATA VTU",
+      number: '07089075584',
       amount: "₦2000.00",
       totalAmount: "₦100.00",
-      status: "Successful",
+      status: "Success",
       paymentMethod: "Wallet",
       transactionNo: "17045621860850336938179613",
       date: "6th January, 2024, 06:29PM",
     },
     {
       service: "Startime",
+      number: '6543654304',
       amount: "₦4000.00",
       totalAmount: "₦100.00",
       status: "Failed",
@@ -28,6 +31,7 @@ export const transactions = [
     },
     {
       service: "DSTV",
+      number: '4576432833',
       amount: "₦100.00",
       totalAmount: "₦100.00",
       status: "Initiated",
@@ -37,15 +41,17 @@ export const transactions = [
     },
     {
       service: "Airtel Airtime VTU",
+      number: '07089075584',
       amount: "₦2000.00",
       totalAmount: "₦100.00",
-      status: "Successful",
+      status: "Success",
       paymentMethod: "Wallet",
       transactionNo: "17045621860850336938179613",
       date: "6th January, 2024, 06:29PM",
     },
     {
       service: "Airtel Airtime VTU",
+      number: '07089075584',
       amount: "₦4000.00",
       totalAmount: "₦100.00",
       status: "Failed",
@@ -55,6 +61,7 @@ export const transactions = [
     },
     {
       service: "Airtel Airtime VTU",
+      number: '07089075584',
       amount: "₦100.00",
       totalAmount: "₦100.00",
       status: "Initiated",
@@ -64,15 +71,17 @@ export const transactions = [
     },
     {
       service: "Airtel Airtime VTU",
+      number: '07089075584',
       amount: "₦2000.00",
       totalAmount: "₦100.00",
-      status: "Successful",
+      status: "Success",
       paymentMethod: "Wallet",
       transactionNo: "17045621860850336938179613",
       date: "6th January, 2024, 06:29PM",
     },
     {
       service: "Airtel Airtime VTU",
+      number: '07089075584',
       amount: "₦4000.00",
       totalAmount: "₦100.00",
       status: "Failed",
@@ -82,6 +91,7 @@ export const transactions = [
     },
     {
       service: "Airtel Airtime VTU",
+      number: '07089075584',
       amount: "₦100.00",
       totalAmount: "₦100.00",
       status: "Initiated",
@@ -91,9 +101,10 @@ export const transactions = [
     },
     {
       service: "Airtel Airtime VTU",
+      number: '07089075584',
       amount: "₦2000.00",
       totalAmount: "₦100.00",
-      status: "Successful",
+      status: "Success",
       paymentMethod: "Wallet",
       transactionNo: "17045621860850336938179613",
       date: "6th January, 2024, 06:29PM",

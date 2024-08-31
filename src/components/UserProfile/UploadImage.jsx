@@ -2,6 +2,7 @@ import ImageHolder from "../../assets/icons/uploadimage-icon.svg";
 import { CustomButton } from "../Button";
 
 export const UploadImage = () => {
+  
   return (
     <div className="flex flex-col items-center justify-between p-6 rounded-2xl border-2 border-custom-grey-30 w-full">
       <img src={ImageHolder} alt="" />

@@ -20,7 +20,11 @@ export default {
       'custom-grey-90' : '#2b3b5a',
       'placeholder-blue' : '#869DCB',
       'custom-grey-60': '#6882b6',
-      'dark-blue': '#000080'
+      'dark-blue': '#000080',
+      'deep-blue' : '#142140',
+      'custom-warning' : '#ffb457',
+      'custom-success' : '#40b545',
+      'custom-error' : '#ee5d50'
       
     },
     extend: {},

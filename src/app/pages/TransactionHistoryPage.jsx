@@ -1,11 +1,11 @@
 import { CustomButton } from "../../components/Button";
-import { Transaction } from "../../components/Transaction";
-import { transactions } from "../../components/transaction-data";
+import { Transaction } from "../../components/TransactionHistory/Transaction";
+import { transactions } from "../../components/TransactionHistory/transaction-data";
 
 export const TransactionHistoryPage = () => {
   return (
-    <section className="mt-8">
-      <CustomButton className={'flex items-center gap-2 text-base font-normal text-placeholder-blue bg-custom-grey-20 border border-custom-grey-30 p-2 h-10 w-48 rounded-lg'}>
+    <section className="mt-8 ">
+      <CustomButton className={'ml-2 flex items-center gap-2 text-base font-normal text-placeholder-blue bg-custom-grey-20 border border-custom-grey-30 p-2 h-10 w-48 rounded-lg'}>
         <svg
           width="24"
           height="24"

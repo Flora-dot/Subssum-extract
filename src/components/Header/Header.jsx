@@ -30,7 +30,7 @@ export const HeaderSignedout = () => {
       <CustomButton
         children={"Sign Up"}
         className={
-          "px-12 py-3 bg-custom-primary-blue text-custom-white rounded-xl text-base font-semibold"
+          "px-12 py-3 bg-custom-primary-blue text-custom-white rounded-xl text-base font-semibold hover:bg-dark-blue"
         }
       />
     </header>
@@ -38,7 +38,6 @@ export const HeaderSignedout = () => {
 };
 
 export const HeaderSignedIn = ({ activeTab }) => {
-  //   const [activeTab, setActiveTab] = useState("Dashboard");
   console.log(activeTab);
 
   return (
