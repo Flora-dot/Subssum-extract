@@ -51,6 +51,16 @@ export const HeaderSignedIn = ({ activeTab }) => {
         {activeTab === "Airtime to cash" && "Airtime to Cash"}
         {activeTab === "Transaction History" && "Transaction History"}
         {activeTab === "Help & Support" && "Help & Support"}
+        {(!activeTab ||
+          (activeTab !== "Dashboard" &&
+            activeTab !== "Buy Airtime" &&
+            activeTab !== "Buy Data" &&
+            activeTab !== "Tv Subscription" &&
+            activeTab !== "Pay Bill" &&
+            activeTab !== "Airtime to cash" &&
+            activeTab !== "Transaction History" &&
+            activeTab !== "Help & Support")) &&
+          "Welcome, Lawal Wahab"}
       </p>
       <div className="flex items-center gap-3">
         <Link
