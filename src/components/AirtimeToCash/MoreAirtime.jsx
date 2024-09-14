@@ -3,7 +3,7 @@ import { CustomButton } from "../Button";
 
 export const MoreAirtime = () => {
   return (
-    <div className=" w-64 flex items-center gap-2 bg-whiterounded-xl border-custom-grey-70">
+    <div className="w-full lg:w-64 flex md:flex-col lg:flex-row items-center gap-2 bg-whiterounded-xl border-custom-grey-70">
       <CustomButton
         className={`w-14 h-10 rounded-xl flex items-center justify-center`}
       >

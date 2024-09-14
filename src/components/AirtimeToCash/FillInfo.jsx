@@ -11,7 +11,7 @@ export const FillInfo = () => {
         Airtime to Cash
       </h4>
       <form action="">
-        <div className="w-full flex gap-4 mt-8">
+        <div className="w-full flex flex-col md:flex-row gap-4 mt-8">
           <NetworkProviderDropdown />
           <div>
             <label
@@ -91,13 +91,14 @@ const NetworkProviderDropdown = () => {
   };
 
   return (
-    <div className="relative w-1/2">
+    <div className="relative w-full md:w-1/2">
       <label className="text-custom-grey-60 font-normal text-sm">
         Select Network
       </label>
       <button
         onClick={toggleDropdown}
         className="w-full px-4 py-2 h-14 text-left border-2 bg-custom-white border-custom-grey-30 rounded-lg focus:outline-none flex items-center justify-between"
+        type="button"
       >
         {selectedProvider ? (
           <>
@@ -126,7 +127,7 @@ const NetworkProviderDropdown = () => {
         </svg>
       </button>
       {isOpen && (
-        <ul className="absolute z-10 w-full mt-1 bg-white border-2 border-custom-grey-30 rounded-md shadow-lg">
+        <ul className="absolute z-10 w-full mt-1 bg-white border-2 border-custom-grey-30 rounded-md shadow-lg bg-custom-white">
           {networkProviders.map((provider) => (
             <li
               key={provider.name}

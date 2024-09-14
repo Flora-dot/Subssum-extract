@@ -20,7 +20,7 @@ export const SidebarMenu = ({ onTabClick }) => {
     setActiveSvg(svgId);
   };
   return (
-    <ul className="list-none flex flex-col gap-3">
+    <ul className="list-none flex flex-col gap-3 pt-24">
       <Link to="/dashboard">
         <li
           onClick={() => handleTabClick("Dashboard")}
@@ -54,7 +54,7 @@ export const SidebarMenu = ({ onTabClick }) => {
                 </clipPath>
               </defs>
             </svg>
-            <p>Dashboard</p>
+            <p className="md:hidden lg:block">Dashboard</p>
           </div>
         </li>
       </Link>
@@ -85,7 +85,7 @@ export const SidebarMenu = ({ onTabClick }) => {
                 }`}
               />
             </svg>
-            <p>Buy Airtime</p>
+            <p className="md:hidden lg:block">Buy Airtime</p>
           </div>
           <svg
             width="24"
@@ -137,7 +137,7 @@ export const SidebarMenu = ({ onTabClick }) => {
                 strokeLinejoin="round"
               />
             </svg>
-            <p>Buy Data</p>
+            <p className="md:hidden lg:block">Buy Data</p>
           </div>
           <svg
             width="24"
@@ -191,7 +191,7 @@ export const SidebarMenu = ({ onTabClick }) => {
               />
             </svg>
 
-            <p>Tv Subscription</p>
+            <p className="md:hidden lg:block">Tv Subscription</p>
           </div>
           <svg
             width="24"
@@ -246,7 +246,7 @@ export const SidebarMenu = ({ onTabClick }) => {
               />
             </svg>
 
-            <p>Pay Electric Bill</p>
+            <p className="md:hidden lg:block">Pay Electric Bill</p>
           </div>
           <svg
             width="24"
@@ -319,7 +319,7 @@ export const SidebarMenu = ({ onTabClick }) => {
               </svg>
             )}
 
-            <p>Airtime to cash</p>
+            <p className="md:hidden lg:block">Airtime to cash</p>
           </div>
         </li>
       </Link>
@@ -355,7 +355,7 @@ export const SidebarMenu = ({ onTabClick }) => {
               />
             </svg>
 
-            <p>Transaction History</p>
+            <p className="md:hidden lg:block">Transaction History</p>
           </div>
         </li>
       </Link>
@@ -390,7 +390,7 @@ export const SidebarMenu = ({ onTabClick }) => {
               />
             </svg>
 
-            <p>Help & Support</p>
+            <p className="md:hidden lg:block">Help & Support</p>
           </div>
         </li>
       </Link>
@@ -410,11 +410,11 @@ export const Logout = () => {
   return (
     <Link to="/login">
       <div
-        className="w-full flex gap-3 items-center text-xl mt-14 font-medium py-3 pl-2 pr-12 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white"
+        className="w-full flex gap-3 items-center text-xl mt-14 font-medium py-3 px-3 rounded-xl hover:bg-custom-grey-70 hover:text-custom-white"
         onClick={handleLogout}
       >
         <img src={CallCenterIcon} alt="" />
-        <p>Log Out</p>
+        <p className="md:hidden lg:block">Log Out</p>
       </div>
     </Link>
   );

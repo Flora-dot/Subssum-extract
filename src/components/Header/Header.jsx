@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { CustomButton } from "../Button";
 import { Link } from "react-router-dom";
 
@@ -39,9 +40,19 @@ export const HeaderSignedout = () => {
 
 export const HeaderSignedIn = ({ activeTab }) => {
   console.log(activeTab);
+  const [showSideBar, setShowSideBar] = useState(false);
+
+  const handleShowSideBar = () => {
+    setShowSideBar(!showSideBar);
+  };
 
   return (
-    <header className="flex items-center justify-between">
+    <header className="flex flex-col items-start md:items-center md:justify-between gap-3">
+      <div className="flex items-center gap-6">
+      <CustomButton className={'border-2 border-custom-primary-blue p-1 rounded-lg md:hidden'} onClick={handleShowSideBar}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#4169e1" viewBox="0 0 256 256"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"></path></svg>
+      </CustomButton>
+      
       <p className="font-medium text-xl leading-5 text-custom-grey-90">
         {activeTab === "Dashboard" && "Welcome, Lawal Wahab"}
         {activeTab === "Buy Airtime" && "Buy Airtime"}
@@ -62,14 +73,16 @@ export const HeaderSignedIn = ({ activeTab }) => {
             activeTab !== "Help & Support")) &&
           "Welcome, Lawal Wahab"}
       </p>
-      <div className="flex items-center gap-3">
+      </div>
+      <div className="flex  md:flex-row ml-16 md:ml-20 lg:ml-0 gap-2 lg:gap-3">
         <Link
           to="/upgrade"
           className="font-semibold text-base text-custom-primary-blue"
         >
           Upgrade To Merchant
         </Link>
-        <CustomButton className={"rounded-full p-2 bg-custom-grey-30"}>
+       <div className="flex  items-center gap-2">
+       <CustomButton className={"rounded-full p-2 bg-custom-grey-30 hi"}>
           <svg
             width="16"
             height="16"
@@ -111,6 +124,7 @@ export const HeaderSignedIn = ({ activeTab }) => {
             </svg>
           </CustomButton>
         </Link>
+       </div>
       </div>
     </header>
   );

@@ -16,7 +16,7 @@ export const Layout = () => {
     return(
         <section className='flex'>
             <Sidebar onTabClick={setActiveTab}/>
-            <main className='w-4/5 p-7 bg-custom-white'>
+            <main className='w-full md:w-full  lg:w-4/5  p-7  bg-custom-white'>
             <HeaderSignedIn activeTab={activeTab} />
                 <Outlet />
             </main>
